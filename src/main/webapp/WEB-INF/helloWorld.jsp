@@ -19,7 +19,7 @@ Public Area.
 
 </c:when>
 <c:otherwise>
-<c:out value="${securityLevel}" /></p><p> <a href="/" >Home</a>
+<c:out value="${securityLevel}" /></p><p> <a href="<c:url value='/'/>" >Home</a>
 </c:otherwise>
 </c:choose>
 </p>
