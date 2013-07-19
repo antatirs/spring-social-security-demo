@@ -5,18 +5,18 @@
 
 
 <%@ taglib prefix="authz" uri="http://www.springframework.org/security/tags" %>
-
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
  <authz:authorize access="!hasRole('ROLE_USER')">
 
 
 <p>Please log in with a third party provider</p>
 
 
-  <form class="login"action="http://localhost:8080/signin/twitter" method="POST">
+  <form class="login" action="<c:url value='/signin/twitter'/>" method="POST">
 	<p><input type="submit" value="Login with Twitter" /></p>
 </form> 
 
-  <form class="login"action="http://localhost:8080/signin/facebook" method="POST">
+  <form class="login" action="<c:url value='/signin/facebook'/>" method="POST">
 	<p><input type="submit" value="Login with Facebook" /></p>
 </form> 
 
